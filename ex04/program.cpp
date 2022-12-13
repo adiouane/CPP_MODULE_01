@@ -6,7 +6,7 @@
 /*   By: adiouane <adiouane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 15:42:57 by adiouane          #+#    #+#             */
-/*   Updated: 2022/12/12 23:25:27 by adiouane         ###   ########.fr       */
+/*   Updated: 2022/12/13 19:51:07 by adiouane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    ft_replace_text(std::string &line, std::string  &s1, std::string  &s2)
         i = line.find(s1, pos);
         line.erase(i, s1.length());
         line.insert(i, s2);
-        pos += s2.length(); // include iinclude loop
+        pos += s2.length();
     }
 }
 
@@ -38,7 +38,7 @@ void   ft_replace(std::string filename, std::string s1, std::string s2)
         new_file.open(new_filename, std::ios::out); // this for writing in the file
         if (new_file.fail())
         {
-            std::cout << "Error Can't Open This File " << std::endl;  // flachi bafur/ manupilator
+            std::cout << "Error Can't Open This File " << std::endl;
             exit(1);
         }
         while (getline(file, line))
